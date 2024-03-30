@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import Dropzone from "@/components/Dropbox";
 import { Progress } from "@/components/ui/progress";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   const [result, setResult] = useState(null);
@@ -56,12 +57,14 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="py-10">
+    <section className="py-10 flex justify-center items-center">
       <div className="container max-w-3xl">
         <div className="flex items-end">
           <div className="flex-1">
             <h1 className="text-3xl font-bold">Object Detection</h1>
-            <h2 className=" text-gray-500">With Hugging Face transformers</h2>
+            <h2 className=" text-gray-500">
+              <Link href="https://dub.sh/sabuj">Sabuj Ghosh</Link>
+            </h2>
           </div>
 
           <div className="flex-1">
